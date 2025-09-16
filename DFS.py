@@ -1,7 +1,7 @@
 import sys
 
-input = sys.stdin.readline().splitlines()
-t = int(input[0])
+inputy = sys.stdin.readline().splitlines()
+t = int(inputy[0])
 index = 0
 graphs = []
 
@@ -28,15 +28,15 @@ for _ in range(t):
 
     # depth first search - O(n+m) - O(n) for node, seperate O(m) for edge
     visited = n*[False]
-    output = []
+    outputy = []
 
     def dfs(node):
         visited[node] = True
-        output.append(names[node])
+        outputy.append(names[node])
         for node_ in adjacency[node]:
             if not visited[node_]:
                 dfs[node_]
 
     dfs(0)
-    print(" ".join(output))
+    print(" ".join(outputy))
 
