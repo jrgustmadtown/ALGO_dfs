@@ -1,6 +1,6 @@
 import sys
 
-input = sys.stdin().readline().splitlines()
+input = sys.stdin.readline().splitlines()
 t = int(input[0])
 index = 1
 graphs = []
