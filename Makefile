@@ -1,9 +1,9 @@
 all: build run
 
 build:
-	javac DFS.java
+	echo "Nothing to compile."
 run: 
-	java DFS
+	python3 DFS.py
 
 clean:
 	rm *.class
