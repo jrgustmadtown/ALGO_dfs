@@ -4,6 +4,3 @@ build:
 	echo "Nothing to compile."
 run: 
 	python3 DFS.py
-
-clean:
-	rm *.class
