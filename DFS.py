@@ -2,7 +2,7 @@ import sys
 
 input = sys.stdin.readline().splitlines()
 t = int(input[0])
-index = 1
+index = 0
 graphs = []
 
 for _ in range(t):
