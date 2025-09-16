@@ -1,6 +1,6 @@
 import sys
 
-inputy = sys.stdin.readline().splitlines()
+inputy = sys.stdin.read().splitlines()
 t = int(inputy[0])
 index = 0
 graphs = []
@@ -18,12 +18,13 @@ for _ in range(t):
         dissect = line.split()  # "A B" → ["A", "B"]
         name = dissect[0]
         names.append(name)
+    name_index = {name: nm for nm, name in enumerate(names)}
 
     # make adjacency list - O(m) (O(n*m) but n <= 100)
     for i, line in enumerate(lines):
         dissect = line.split()
         for adj in dissect[1:]:
-            j = names.index[adj]
+            j = name_index[adj]
             adjacency[i].append(j)
 
     # depth first search - O(n+m) - O(n) for node, seperate O(m) for edge
