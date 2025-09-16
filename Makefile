@@ -1,9 +1,9 @@
 all: build run
 
 build:
-	javac HelloWorld.java
+	javac DFS.java
 run: 
-	java HelloWorld
+	java DFS
 
 clean:
 	rm *.class
