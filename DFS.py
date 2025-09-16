@@ -39,6 +39,9 @@ for _ in range(t):
             if not visited[node_]:
                 dfs(node_)
 
-    dfs(0)
+    for g in range(n):
+        if not visited[g]:
+            dfs(g)
+            
     print(" ".join(outputy))
 
