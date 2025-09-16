@@ -6,11 +6,11 @@ index = 0
 graphs = []
 
 for _ in range(t):
-    n = int(input[index])
+    n = int(inputy[index])
     index += 1
     names = []
     adjacency = [[] for _ in range(n)]  # [[], [], ...] n times
-    lines = input[index:index + n]  # ["A B", "B A C", ...]
+    lines = inputy[index:index + n]  # ["A B", "B A C", ...]
     index += n
 
     # node names - O(n)
