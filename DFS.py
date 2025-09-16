@@ -2,7 +2,7 @@ import sys
 
 inputy = sys.stdin.read().splitlines()
 t = int(inputy[0])
-index = 0
+index = 1
 graphs = []
 
 for _ in range(t):
@@ -18,6 +18,7 @@ for _ in range(t):
         dissect = line.split()  # "A B" → ["A", "B"]
         name = dissect[0]
         names.append(name)
+        
     name_index = {name: nm for nm, name in enumerate(names)}
 
     # make adjacency list - O(m) (O(n*m) but n <= 100)
@@ -36,7 +37,7 @@ for _ in range(t):
         outputy.append(names[node])
         for node_ in adjacency[node]:
             if not visited[node_]:
-                dfs[node_]
+                dfs(node_)
 
     dfs(0)
     print(" ".join(outputy))
